@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="./scrpit.js" defer></script>
+    <!-- Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Xuân Nam | Introduce</title>
   </head>
-  <body class="bg-github-dark">
-    <!-- Avatar, name and desc -->
+
+  <!-- <body class="dark:bg-github-dark bg-[#fff5ee] transition-all duration-500 ease-in-out"> -->
+
+  <body
+    class="relative bg-cover bg-center -z-[2]"
+    style="background-image: url(./imgs/back-ground.jpg)"
+  >
+    <div
+      class="bg-github-dark fixed inset-0 bg-opacity-40 backdrop-blur-[100px] -z-[1] transition-all duration-300 ease-in-out"
+      id="backGround"
+    ></div>
+    <!-- Nav Bar -->
+    <div
+      class="w-full h-14 flex transition-all duration-500 ease-in-out items-center pt-1 dark:bg-github-dark bg-[#fff5ee] border-b-[1px] border-github-gray px-7 bg-opacity-50 z-[1]"
+    >
+      <!-- Toogle Switch For Dark Mode-->
+      <div class="ml-auto">
+        <div class="flex justify-between items-center align-middle">
+          <img
+            src="./symbols/light/dark-mode.svg"
+            alt="darkmode"
+            id="darkModeLightIcon"
+            class="w-5 h-5 mr-2"
+          />
+          <img
+            src="./symbols/dark/dark-mode.svg"
+            alt="darkmode"
+            id="darkModeDarkIcon"
+            class="w-5 h-5 mr-2 hidden"
+          />
+          <label for="darkmode" class="inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="darkmode" class="sr-only peer" />
+            <div
+              class="relative w-9 h-5 peer transition-all duration-200 ease-in-out bg-[#d5d7db] inline-block rounded-full after:contents-[''] after:w-4 after:h-4 after:bg-white peer-checked:after:bg-[#3758f9] after:inline-block after:absolute after:rounded-full after:top-[2px] after:left-[3px] peer-checked:after:translate-x-[15px] rtl:peer-checked:after:translate-x-[15px] after:transition-all after:duration-200 after:ease-in-out peer-checked:transition-all peer-checked:duration-200 peer-checked:ease-in-out"
+            ></div>
+          </label>
+          <img
+            src="./symbols/light/light-mode.svg"
+            alt="lightmode"
+            id="lightModeLightIcon"
+            class="ml-2 w-5 h-5"
+          />
+          <img
+            src="./symbols/dark/light-mode.svg"
+            alt="lightmode"
+            id="lightModeDarkIcon"
+            class="ml-2 w-5 h-5 hidden"
+          />
+        </div>
+      </div>
+      <!-- Avatar, name and desc -->
+    </div>
     <div
       class="flex flex-col justify-center items-center lg:flex-row lg:items-start mt-10 gap-9 lg:gap-16 p-6 sm:p-8 md:p-12"
     >
@@ -22,14 +78,16 @@
           />
         </div>
         <!-- Name -->
-        <div class="text-white">
+        <div
+          class="dark:text-white text-black transition-all duration-500 ease-in-out"
+        >
           <p class="font-bold text-[25px] lg:text-2xl">Nguyễn Hoàng Xuân Nam</p>
           <p class="text-github-gray">He/him</p>
         </div>
       </div>
       <!-- Decs -->
       <div
-        class="w-full lg:max-w-screen-md h-auto border border-github-gray rounded-2xl p-6 bg-github-dark text-white"
+        class="w-full lg:max-w-screen-md h-auto border border-github-gray rounded-2xl p-6 dark:bg-github-dark dark:text-white transition-all duration-500 ease-in-out"
       >
         <h1 class="font-bold text-2xl">
           👋 Hi there, strangers, I'm Bùi Thế Anh!
